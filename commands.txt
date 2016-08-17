@@ -1,0 +1,108 @@
+sudo apt-get install chrony
+
+sudo ntpdate ntp.ubuntu.com
+
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu trusty main" > /etc/apt/sources.list.d/ros-latest.list'
+
+wget https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -O - | sudo apt-key add -
+
+sudo apt-get update && sudo apt-get upgrade
+
+sudo apt-get install ros-indigo-desktop-full
+
+sudo atp-get install ros-indigo-rqt-*
+
+sudo rosdep init
+
+rosdep update
+
+sudo apt-get install phython-rosinstall
+
+source /opt/ros/indigo/setup.bash
+
+mkdir -p ~/catkin_ws/src
+
+cd ~/catkin_ws/src
+
+catkin_init_workspace
+
+cd ~/catkin_ws/
+
+catkin_make
+
+source ~/catkin_ws/devel/setup.bash
+
+source /opt/ros/indigo/setup.bash
+source ~/catkin_ws/devel/setup.bash
+
+gedit ~/.bashrc
+
+source /opt/ros/indigo/setup.bash
+source ~/catkin_ws/devel/setup.bash
+
+export ROS_HOSTNAME=xxx.xxx.xxx.xxx
+export ROS_MASTER_URI=http://${ROS_HOSTNAME}:11311
+
+alias cw='cd ~/catkin_ws'
+alias cs='cd ~/catkin_ws/src'
+alias cm='cd ~/catkin_ws && catkin_make'
+
+course ~/.bashrc
+
+
+roscore
+
+rosrun turtlesim turtlesim_node
+
+rosrun turtlesim turtle_teleop_key
+
+rosrun rqt_graph rqt_graph
+
+
+
+
+
+
+Sublime Text 3
+
+sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
+sudo apt-get update
+sudo apt-get install sublime-text
+
+
+
+
+Git
+
+sudo apt-get install git
+
+git config --global user.name “hurgroup”
+
+git config --global user.email “pilwonhur@tamu.edu”
+
+mkdir local_folder
+
+cd local_folder && git init
+
+git add filename
+
+git add ProjectFolderName
+
+git commit -m "first commit"
+
+git remote add origin https://github.tamu.edu/pilwonhur/rostutorial.git
+
+git push -u origin master
+
+git clone https://github.tamu.edu/pilwonhur/rostutorial.git
+
+git pull origin master
+
+git status
+
+git add README.md
+
+git rm README.md
+
+
+
